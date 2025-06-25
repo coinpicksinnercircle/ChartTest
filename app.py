@@ -38,12 +38,17 @@ def make_figure():
         yaxis3=dict(title="Search Trend (0–100)", overlaying="y", side="right", range=[0, 100]),
         height=600, plot_bgcolor="black", paper_bgcolor="black", font=dict(color="white")
     )
+
+print("Chart generated successfully", flush=True)
+
     return fig
 
 app.layout = html.Div([
     html.H1("Market vs Google Search Trends"),
     dcc.Graph(figure=make_figure())
 ])
+
+print("Layout initialized", flush=True)
 
 if __name__ == "__main__":
     app.run_server(host="0.0.0.0", port=10000, debug=False)
