@@ -39,8 +39,7 @@ def make_figure():
         height=600, plot_bgcolor="black", paper_bgcolor="black", font=dict(color="white")
     )
 
-print("Chart generated successfully", flush=True)
-
+    print("Chart generated successfully", flush=True)
     return fig
 
 app.layout = html.Div([
