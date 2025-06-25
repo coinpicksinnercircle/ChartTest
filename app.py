@@ -32,11 +32,14 @@ def make_figure():
 
     fig.update_layout(
         title="BTC & S&P 500 vs Google Trends",
-        xaxis=dict(title="Date"),
-        yaxis=dict(title="BTC (log)", type="log", side="left"),
-        yaxis2=dict(title="S&P 500 (log)", type="log", overlaying="y", side="left", position=0.05),
-        yaxis3=dict(title="Search Trend (0–100)", overlaying="y", side="right", range=[0, 100]),
-        height=600, plot_bgcolor="black", paper_bgcolor="black", font=dict(color="white")
+        xaxis=dict(title="Date", showgrid=False),
+        yaxis=dict(title="BTC (log)", type="log", side="left", showgrid=False),
+        yaxis2=dict(title="S&P 500 (log)", type="log", overlaying="y", side="left", position=0.05, showgrid=False),
+        yaxis3=dict(title="Search Trend (0–100)", overlaying="y", side="right", showgrid=False, tickmode="linear", tick0=0, dtick=20, range=[0, 100]),
+        height=600,
+        plot_bgcolor="black",
+        paper_bgcolor="black",
+        font=dict(color="white")
     )
 
     print("Chart generated successfully", flush=True)
